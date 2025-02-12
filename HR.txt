@@ -63,6 +63,22 @@ WHERE FirstName = 'Salma'
 DELETE FROM employee
 WHERE FirstName="ahmad";
 
+CREATE TABLE department_Location
+(
+  departmentID int ,
+  locationID int,  
+  CONSTRAINT DEPARTMENT_Location FOREIGN KEY (DEPARTMENTID) REFERENCES DEPARTMENT(DEPARTMENTID),
+  CONSTRAINT DEPARTMENT_Location1 FOREIGN KEY (locationID) REFERENCES location(locationID)
+);
+
+
+CREATE TABLE employee_project
+(
+  employeeID int ,
+  projectID int,  
+  CONSTRAINT employee_project FOREIGN KEY (employeeID) REFERENCES employee(employeeID),
+  CONSTRAINT employee_project1 FOREIGN KEY (projectID) REFERENCES project(projectID)
+);
 
 
 
